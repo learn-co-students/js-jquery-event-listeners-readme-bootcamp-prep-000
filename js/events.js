@@ -1,33 +1,51 @@
-function getIt(){
+//define functions here
+function getIt()
+{
+  //binds click event to p tag alerting "Hey!"
   $(`p`).on(`click`, function(){
     alert("Hey!");
     return;
-  })
+  });
 }
 
-function frameIt(){
+function frameIt()
+{
+  //binds load adds tasty to image to add red frame
   $(`img`).on(`load`, function(){
+
     $(`img`).addClass("tasty");
-  })
+  });
 }
 
-function submitIt(){
-  $("form").on("submit", function(){
-    alert("Your form is going to be submitted now.");
-  })
-}
-
-function pressIt(){
+function pressIt()
+{
+  //bind keydown to input field when a user pressed g
   $(document).on(`keydown`, function(key){
-    if(key.which === 71){
+    if(key.which === 71)
+    {
       alert("You pressed the 'g' key!");
     }
-  })
+    return;
+  });
 }
 
-$(document).ready(function){
-  getIt();
-  frameIt();
-  submitIt();
-  pressIt();
+
+function submitIt()
+{
+  //binds submit to alert "Your form is going to be submitted now"
+  $(`form`).on(`submit`, function()
+  {
+    alert("Your form is going to be submitted now.");
+    return;
+  });
 }
+
+
+$(document).ready(function()
+{
+// call functions here
+window.getIt();
+window.pressIt();
+window.frameIt();
+window.submitIt();
+});
