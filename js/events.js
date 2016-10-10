@@ -13,6 +13,7 @@ function frameIt() {
 
 
 var pressIt = function(e) {
+  $('input').on('keydown', pressIt);
   const key = parseInt(e.detail || e.which)
   if(key === 71) {
     alert('You pressed the G key')
