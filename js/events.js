@@ -12,13 +12,14 @@ function frameIt() {
 }
 
 
-var pressIt = function(e) {
-  $('input').on('keydown', pressIt);
-  const key = parseInt(e.detail || e.which)
-  if(key === 71) {
+var pressIt = function() {
+  $('input').on('keydown', function(e){
+
+
+  if(parseInt(e.detail || e.which) === 71) {
     alert('You pressed the G key')
   }
-}
+});
 
 
 var submitIt = function() {
@@ -29,11 +30,12 @@ var submitIt = function() {
 
 
 $(document).ready(function(){
+
+
   $('p').on('click', getIt);
 
 $('img').on('load', frameIt);
 
-$('input').on('keydown', pressIt);
 
 $('form').submit('submitIt');
 
