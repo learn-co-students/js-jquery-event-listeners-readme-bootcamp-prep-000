@@ -12,14 +12,16 @@ function frameIt() {
 }
 
 
-var pressIt = function() {
-  $('input').on('keydown', function(e){
 
+  function pressIt() {
+  $('#typing').on('keydown', function(e) {
+    // 'g' corresponds to 71
+    if (e.which  === 71) {
+      alert("You pressed 'g'!")
+    }
 
-  if(parseInt(e.detail || e.which) === 71) {
-    alert('You pressed the G key')
-  }
-});
+  })
+}
 
 
 var submitIt = function() {
@@ -31,6 +33,7 @@ var submitIt = function() {
 
 $(document).ready(function(){
 
+pressIt();
 
   $('p').on('click', getIt);
 
