@@ -1,4 +1,4 @@
-// Learn.co Bootcamp Prep 26 JavaScript jQuery Event Listeners
+// Learn.co Bootcamp Prep 26 JavaScript jQuery Event Listeners Lab.
 
 // Define a function, 'getIt, that accepts no parameter(s).
 // Bind a 'click' event to the 'p' tag.
