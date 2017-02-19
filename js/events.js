@@ -1,40 +1,35 @@
 //define functions here
+//1
+function getIt(){
+  $('p').on('click',function(){
+    alert ("Hey!");
+  })
+}
+//2
+function frameIt(){
+  $('img').on('load', function(){
+    $('img').addClass('tasty');
+  })
+}
+ function submitIt(){
+   $("form").on('submit',function(){
+     alert ("Your form is going to be submitted now.")
+   })
+ }
 
-$(document).ready(function(){
+function pressIt(){
+  $(document).on('keydown', function(key){
+    if(key.which==71){
+      alert("You Have pressed the g key");
+    }
+  })
 
-// call functions here
-$('h1').on("click", function(){
-  //action you want to happen
-});
-
-$('img').on('load',function(){
-//action you want to happen
-
-});
-//keypress
-$(document).on('keypress',
-function(key){
-  if (key.which == 13){
-    alert('enter was pressed');
-  }
-});
-
-//keyup
-$(document).on('keyup',
-function(key){
-  if (key.which==82){
-    alert('r was pressed');
-  }
-
-});
-//keydown$
-$(document).on('keydown',
-function(key){
-  if(key.which==83){
-    alert('s was pressed');
 }
 
-  });
-
+$(document).ready(function(){
+getIt();
+frameIt();
+submitIt();
+pressIt();
 
 });
