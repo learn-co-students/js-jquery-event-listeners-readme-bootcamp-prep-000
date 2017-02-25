@@ -1,34 +1,33 @@
 //define functions here
 function getIt() {
-  $('p').on('click', function() {
-    alert('Hey!')
-  });
+  $('p').on('click', function(){
+    alert("Hey!");
+  })
 }
 
 function frameIt() {
-  $('img').on('load', function() {
-    $('this').addClass('tasty')
-  });
-  return;
+  $('img').on('load', function(){
+    $('img').addClass('tasty');
+  })
 }
 
 function pressIt() {
-  $('document').on('keydown', function() {
-    if(e.which === 71) {
-      alert('g key was pressed.')
-    })
-  });
-  return;
+  $('input').on('keydown', function(key){
+    if (key.which == 71) {
+      alert('You pressed the G key');
+    }
+  })
 }
 
 function submitIt() {
-  $('form').on("submit", function() {
+  $('form').on('submit', function() {
     alert('Your form is going to be submitted now.')
   })
 }
 
 $(document).ready(function(){
-
-// call functions here
-getIt;
+  getIt();
+  frameIt();
+  pressIt();
+  submitIt();
 });
