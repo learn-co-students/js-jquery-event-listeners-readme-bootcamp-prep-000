@@ -2,8 +2,14 @@
 //learn open js-jquery-event-listeners-readme-bootcamp-prep-000
 
 var getIt = () => {
-  $('p').appand("click");
+  $('p').append("click");
   alert("Hey!");
+}
+
+var frameIt = () => {
+  $('img').on('load' , function() {
+    $('img').prepend(.tasty);
+  });
 }
 $(document).ready(function(){
 
