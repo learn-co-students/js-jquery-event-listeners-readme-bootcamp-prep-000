@@ -1,13 +1,6 @@
 //define functions here
 
-$(document).ready(function(){
 
-// call functions here
-frameIt();
-getIt();
-pressIt();
-submitIt();
-});
 
 function getIt() {
 $('p').on ('click', () => {
@@ -32,3 +25,12 @@ function pressIt() {
     }
   })
 }
+
+$(document).ready(function(){
+
+// call functions here
+frameIt();
+getIt();
+pressIt();
+submitIt();
+});
