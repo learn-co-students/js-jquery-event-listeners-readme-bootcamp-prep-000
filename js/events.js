@@ -40,6 +40,6 @@ $(document).ready(function(){
 getIt();
 frameIt();
 pressIt();
-sendIt();
+submitIt();
 
 });
