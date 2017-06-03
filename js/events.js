@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  getIt()
+  frameIt()
+  pressIt()
+  submitIt()
+
+});
 function getIt(){
   $('p').on("click", function(){
     alert("Hey!");
@@ -13,16 +19,16 @@ function frameIt(){
 }
 
 function pressIt(){
-  $('input:first').on("keyup",function(key){
+  $('#typing').on("keydown",function(key){
     if(key.which === "G".charCodeAt()) {
       alert("G key pressed!");
-      $('input:first').val('correct')
     }
   });
 }
 
 function submitIt(){
   $('form').on("submit",function(){
+    $('input:first').val('correct')
     if ($('input:first').val() === "correct") {
       alert("Your form is going to be submitted now.");
       return;
@@ -31,9 +37,3 @@ function submitIt(){
     return;
   });
 }
-  getIt()
-  frameIt()
-  pressIt()
-  submitIt()
-
-});
