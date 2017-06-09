@@ -19,16 +19,13 @@ function submitIt(){
 
 function pressIt(){
   $("form").on('keydown', function(key){
-    if(key.which == )
+    if(key.which == 71){
+      alert('g was pressed')
+    }
 
   })
 }
 
-$(document).on('keydown', function(key) {
-  if(key.which == 83){
-      alert('s was pressed');
-  }
-});
 
 $(document).ready(function(){
 
