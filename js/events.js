@@ -10,7 +10,8 @@ function getIt() {
 //Frame it//
 function frameIt() {
   $('img').load(function() {
-  }).addClass('tasty');
+    $('img').addClass('tasty');
+  });
 }
 
 //Submit it//
