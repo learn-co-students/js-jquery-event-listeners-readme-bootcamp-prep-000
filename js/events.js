@@ -1,6 +1,8 @@
 //define functions here
 function getIt() {
-  alert("Hey!")
+  $('p').on("click", function() {
+    alert("Hey!")
+  })
 }
 function frameIt() {
   $('img').on("load", function(img.className += " tasty"))
@@ -16,7 +18,10 @@ function submitIt() {
 
 $(document).ready(function(){
 // call functions here
-  $('p').on("click", function getIt() {
-    alert("Hey!")
-  })
+    function getIt() {
+      $('p').on("click", function() {
+        alert("Hey!")
+      })
+    }
+    getIt()
 };
