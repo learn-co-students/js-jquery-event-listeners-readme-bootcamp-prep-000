@@ -13,7 +13,7 @@ function frameIt() {
 function pressIt() {
   $("#typing").on("keydown", function gPressed(e) {
     let key = parseInt(e.which || e.detail);
-    if(key.which == 71) {
+    if(key == 71) {
       alert("You have pressed 'g'");
     }
   });
