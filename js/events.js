@@ -27,6 +27,4 @@ $(document).ready(function(){
   window.frameIt()
   window.pressIt()
   window.submitIt()
-// call functions here
-
 });
