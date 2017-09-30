@@ -6,12 +6,12 @@ function getIt() {
 }
 function frameIt() {
   $('img').on('load', function () {
-    $('img').append("class='tasty'");
+    $('img').addClass('tasty');
   });
 }
 function pressIt() {
-  $('#typing').on('keydown', function () {
-    if (input.which === 'G') {
+  $('form input:first-child').on('keydown', function (key) {
+    if (key.which === 71) {
       alert('You entered a G!');
     }
   });
