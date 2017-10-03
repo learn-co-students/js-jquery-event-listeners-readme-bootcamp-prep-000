@@ -1,3 +1,4 @@
+ 
 /*
 describe('Selectors', () => {
   it('getIt() binds a click event to the paragraph', function() {
@@ -59,4 +60,4 @@ describe('Selectors', () => {
   });
 
 });
-*/
+ */

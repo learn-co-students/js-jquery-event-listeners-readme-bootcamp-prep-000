@@ -1,42 +1,38 @@
 //define functions here
-function getIt() {
-   $('p').on("click", function () {
-    alert("Hey!");
-   })
- }
+function getIt(){
+   $('p').on("click", function() {
+    alert ("Hey");
+ })
+}
 
- function frameIt() {
-    $('img').on("load", function() {
-   $('img').addClass("tasty");
+function frameIt(){
+$('img').on("load", function(){
+  $('img').attr('class', "tasty");
+    }
   })
  }
 
- function pressIt() {
-  $('#typing').on("keydown", function(press) {
-    if (press.which === 71) {
-   alert("You have entered g.");
-     }
-   })
+ function pressIt(){
+  $('input').on('keydown', function(key){
+    if (key.which == 71){
+    alert ('G!');
+    }
+  })
  }
 
- function submitIt() {
- $('form').on("submit", function() {
-   alert("Your form is going to be submitted now.");
-   })
- }
-
- $("form").on("submit", function() {
-   if ($( "input:first" ).val() === "correct") {
-     alert('your form is going to be submitted now');
-     return;
+ function submitIt(){
+    $("form").on("submit", function() {
+     if ($( "input:first" ).val() === "I love jQuery") {
+        alert('your form is going to be submitted now');
+       return;
    }
-   alert("you entered the wrong value");
-   return;
- });
-
-function () {
-
+  $("div").html("Not valid!");
+ })
 }
-  $(document).ready(function(){
 
-  // call functions here
+$(document).ready(function(){
+getIt();
+frameIt();
+pressIt();
+submitIt();
+ // call functions here
