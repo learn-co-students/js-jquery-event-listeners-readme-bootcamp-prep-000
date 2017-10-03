@@ -1,63 +1,52 @@
- 
 /*
-describe('Selectors', () => {
-  it('getIt() binds a click event to the paragraph', function() {
-    window.alert = expect.createSpy()
+describe('jQuery Methods', function() {
 
-    window.getIt();
+   beforeEach(function() {
+     setFixtures('<body><p> This is some text to click</p><img src="https://s3.amazonaws.com/after-school-assets/minion-tongue.jpg"><form><input id="typing" type="text"><input type="submit"></form><div></div></body><style>.tasty { border-width: 5px; border-color: red; border-style: solid;}</style></body>');
+   });
 
-    window.$('p')[0].click()
+   it('#doIt binds a click event to the paragraph', function() {
+     getIt();
+     var p = $('p')[0];
+     var pClickEvent = $._data(p, "events");
+     var myKey = [];
+     for (var key in pClickEvent){ myKey.push(key);}
+     expect(myKey[0]).toEqual("click");
+   });
 
-    expect(window.alert).toHaveBeenCalled();
-  });
+   it('#frameIt frames the minion when the page loads', function() {
+     frameIt()
+     $("img").trigger('load');
 
-  it('frameIt() binds an event that frames the minion when the page loads', function() {
-    window.frameIt()
+     expect($('img').attr("class")).toEqual("tasty");
+ });
 
-    const img = window.$('img')
+    it('#pressIt alerts the user when the g key was pressed down', function() {
+     pressIt();
+     // debugger;
+     var input = $('#typing')[0];
+     var inputPressEvent = $._data(input, "events");
+     var myKey = [];
+     for (var key in inputPressEvent){ myKey.push(key);}
 
-    img.trigger('load');
+     expect(myKey[0]).toEqual("keydown");
+   });
 
-    expect(img.attr("class")).toEqual("tasty");
-  });
+   it('#submitIt submits the form if the user enters "I love jQuery', function() {
+     submitIt();
+    var myForm = $('form')[0];
+     var formSubmitEvent = $._data(myForm, "events");
+     var myKey = [];
+     for (var key in formSubmitEvent){ myKey.push(key);}
+     expect(myKey[0]).toEqual("submit");
+   });
 
-  describe('pressIt()', () => {
-    it('pressIt() binds an event that alerts the user when the G key was pressed down', function() {
-      window.alert = expect.createSpy()
+   it('#submitIt does not submit the form without the correct input value', function() {
+     $('#typing').val("this is a form entry");
+     submitIt();
+     $('form').submit();
+     expect($('div:last')[0].innerHTML).toEqual("Not Valid!");
+   });
 
-      window.pressIt();
-
-      const input = window.$('#typing');
-      const event = window.$.Event('keydown', { which: 71 })
-      input.trigger(event)
-
-      expect(window.alert).toHaveBeenCalled()
-    })
-
-    it('does not alert if another key is pressed', () => {
-      window.alert = expect.createSpy()
-
-      window.pressIt();
-
-      const input = window.$('#typing');
-      const event = window.$.Event('keydown', { which: 70 })
-      input.trigger(event)
-
-      expect(window.alert).toNotHaveBeenCalled()
-    })
-  })
-
-  it('submitIt() binds an event that alerts "Your form is going to be submitted now." when the form is submitted', function() {
-    window.alert = expect.createSpy()
-
-    window.submitIt();
-
-    const form = window.$('form')[0]
-
-    window.$(form).trigger('submit')
-
-    expect(window.alert).toHaveBeenCalledWith('Your form is going to be submitted now.');
-  });
-
-});
- */
+ });
+*/
