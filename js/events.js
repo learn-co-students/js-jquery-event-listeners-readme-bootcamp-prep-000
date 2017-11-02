@@ -15,7 +15,7 @@ function frameIt() {
 
 function pressIt() {
   $("form").on("keydown", function(e){
-    if (e.which === "G".charCodeAt(0)) {
+    if ((e.which || e.location || e.detail) === "G".charCodeAt(0)) {
       alert("You pressed the G key.");
     }
   });
@@ -35,5 +35,5 @@ $(document).ready(function(){
   frameIt();
   pressIt();
   submitIt();
-  
+
 });
