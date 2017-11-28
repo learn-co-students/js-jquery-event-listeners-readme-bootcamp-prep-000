@@ -10,8 +10,9 @@ getIt();
 // call functions here
 
 var frameIt = function(){
-  $('.tasty').on('load', function(){
-    append("border: 10px solid; border-color: red;");
+  $('img').on('load', function(){
+    $('img').addClass("tasty");
+    // border: 10px solid; border-color: red;
   });
 };
 frameIt();
