@@ -13,9 +13,16 @@ function frameIt() {
 function pressIt() {
   $('input').on('keydown', function(key){
     if(key.which === 71) {
-      console.log("You pressed the 'g' key");
+      alert("You pressed the 'g' key");
     }
   })
+}
+
+function submitIt() {
+  $('form').submit(function(e){
+    alert("Your form is going to be submitted now.")
+  })
+
 }
 
 $(document).ready(function(){
@@ -23,5 +30,6 @@ $(document).ready(function(){
 getIt();
 frameIt();
 pressIt();
+submitIt()
 
 });
