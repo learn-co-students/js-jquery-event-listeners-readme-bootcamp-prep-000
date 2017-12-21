@@ -1,7 +1,6 @@
-
 function getIt(){
   debugger;
-  $('p').on(click, function() {
+  $('p').on('click', function() {
     alert("Hey!");
   })
 }
@@ -9,7 +8,7 @@ function getIt(){
 function frameIt(){
   $('img').on('load', function(){
     $( "img" ).addClass( "tasty" )
-  }
+  })
 }
 
 
@@ -18,16 +17,16 @@ function pressIt(){
     console.log(key.which)
   if(key.which == 71){
       alert('g was pressed');
-  } 
+  }
 });
 }
 
 function submitIt(){
-  $('form submit').on('submit', function() {
+  $('form').on('submit', function() {
       alert('Your form is going to be submitted now.');
-  }
-});
-}
+  })
+};
+
 
 $(document).ready(function(){
   debugger;
@@ -39,4 +38,4 @@ $(document).ready(function(){
 
   submitIt();
 
-}
+})
