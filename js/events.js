@@ -13,18 +13,19 @@ function frameIt(){
 function pressIt(){
   $("input").on("keydown", function(e){
     if (e.which === 71){
-      window.alert("G was pressed.");
+      window.alert("letter G was pressed.");
     }
   });
 }
 
 function submitIt(){
   $("form").on("submit", function(){
-    window.alert("Your form is going to be submitted now.");
+      window.alert("Your form is going to be submitted now.");
   });
 }
 
 getIt();
+
 frameIt();
 pressIt();
 submitIt();
