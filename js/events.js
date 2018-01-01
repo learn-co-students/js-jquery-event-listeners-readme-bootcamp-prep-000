@@ -22,7 +22,9 @@ function pressIt() {
 
 function submitIt() {
   $('form').on('submit', function () {
-    alert("Your form is going to be submitted now.")
+    if ($( "input:first" )).val() === 'goalgoalgoal' {
+      alert("Your form is going to be submitted now.")
+    }
   })  
 }
 
