@@ -22,7 +22,7 @@ function pressIt() {
 
 function submitIt() {
   $('form').on('submit', function () {
-    if ($( "input:first" )).val() === 'goalgoalgoal' {
+    if ($( "input:first" ).val() === 'secret psswd') {
       alert("Your form is going to be submitted now.")
     }
   })  
