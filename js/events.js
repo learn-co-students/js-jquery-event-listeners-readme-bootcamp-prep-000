@@ -12,14 +12,16 @@ function frameIt() {
 };
 
 function pressIt() {
-  $('p').on('click', function() {
-    alert("Hey!");
+  $('input').on('keydown', function(key) {
+    if (key.which === 71) {
+      alert('Hey!')
+    }
   })
 };
 
 function submitIt() {
-  $('p').on('click', function() {
-    alert("Hey!");
+  $('form').on('submit', function() {
+    alert("Your form is going to be submitted now.");
   })
 };
 
@@ -27,5 +29,7 @@ function submitIt() {
 $(document).ready(function(){
   getIt();
   frameIt();
+  pressIt();
+  submitIt();
 
 });
