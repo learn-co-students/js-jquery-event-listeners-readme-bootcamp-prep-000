@@ -9,7 +9,7 @@ function frameIt(){
   });
 }
 
-function presIt(){
+function pressIt(){
   $('input').on('keydown', (key) => {
     if (key.which === 71) {
       alert("You pressed the G key");
@@ -18,7 +18,7 @@ function presIt(){
 }
 
 function submitIt() {
-  $('form').on('submit', () => alert('Your form is going to be submitted now'));
+  $('form').on('submit', () => alert('Your form is going to be submitted now.'));
 }
 
 $(document).ready(function(){
