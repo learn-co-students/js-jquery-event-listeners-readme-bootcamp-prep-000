@@ -4,17 +4,17 @@ function getIt(){
 }
 
 function frameIt(){
-  $('img').on('load', () =>{this.classList.add('tasty'); return;});
-}
+  $('img').on('load', (e) => {$(e.currentTarget).addClass('tasty');});
+} //if using an arrow function, cannot use $(this) so use target instead.
 
 function pressIt(){
-  $('#typing').on('keydown', function(e){
-    e === 71 ? alert('Pressed G!') : null;
+  $('#typing').on('keydown', (e) =>{
+    e.which === 71 ? alert('Pressed G!') : null;
   });
 }
 
 function submitIt(){
-  $('form').on('submit', function(){
+  $('form').on('submit', () =>{
     alert('Your form is going to be submitted now.');
     return;
   });
