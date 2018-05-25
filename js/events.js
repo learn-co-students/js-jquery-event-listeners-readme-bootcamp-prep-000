@@ -10,7 +10,7 @@ function frameIt() { /* This will execute when it knows that the image has loade
   //console.log("Will this display?");
   //$('img').trigger('load');
   $('img').on('load', function() {
-    //console.log("Testing!");
+    //console.log("Testing again!");
     
     $('img').addClass("tasty");
     
@@ -20,21 +20,23 @@ function frameIt() { /* This will execute when it knows that the image has loade
 }
 
 function pressIt() {
+  //console.log("Testing")
   $("form input:first").on("keydown", function(key) {
     
     if(key.which == 71){
       alert('g was pressed');
     }
   });
-}
+} 
 
-/*function pressIt(){ //This doesn't work.
-  $('form').on('keydown', function() {
+/* function pressIt(){ //This doesn't work as intended. With keydown, it's better to check the key value using key.which
+
+  $('input:first').on('keydown', function() {
     if($( 'input:first' ).val() == "g"){
       alert("g was pressed");
     }
   });
-}*/
+} */
 
 function submitIt() {
   $('form').on("submit", function() {
@@ -47,5 +49,6 @@ $(document).ready(function(){
   frameIt();
   getIt();
   pressIt();
+  submitIt();
   //console.log('jump');
 });
