@@ -5,7 +5,8 @@ $(document).ready(function(){
 // call functions here
 getIt();
 frameIt();
-
+pressIt();
+submitIt();
 });
 
 /*
@@ -41,9 +42,9 @@ the G key.
 function pressIt()
 {
   $('#typing').keydown(function(keyPressed){
-    if(keyPressed.which === 'g' || keyPressed.which === 'G')
+    if(keyPressed.which == 71)
     {
-      alert("You have pressed g/G key!!");
+      window.alert("You have pressed g/G key!!");
     }
   });
   
@@ -53,3 +54,10 @@ function pressIt()
 Define a function submitIt that does not accept a parameter. The function should bind a 
 submit event to the form that alerts "Your form is going to be submitted now.".
 */
+
+function submitIt()
+{
+  $('form').on("submit",function(){
+    window.alert('You have clicked the submit button...DOOM ON YOU!!!!')
+  });
+}
