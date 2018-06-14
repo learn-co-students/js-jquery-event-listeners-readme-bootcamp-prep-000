@@ -21,8 +21,5 @@ function submitIt() {
   })
 }
 $(document).ready(function(){
-  getIt()
-  frameIt()
-  pressIt()
-  submitIt()
-});
+  getIt(); frameIt(); pressIt(); submitIt();
+})
