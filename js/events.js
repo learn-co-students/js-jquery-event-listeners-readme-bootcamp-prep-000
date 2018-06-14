@@ -7,7 +7,6 @@ function getIt(){
 
 function frameIt(){
   $("img").on('load', function(){
-    $(this).css('border', "solid 2px red");  
     $(this).append('<class="tasty"/>')
     
   })
