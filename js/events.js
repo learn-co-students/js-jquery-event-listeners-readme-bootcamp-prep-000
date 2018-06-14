@@ -1,4 +1,5 @@
 //define functions here
+
 function getIt(){
   $('p').on("click", function(){
     alert('Hey!')
@@ -7,10 +8,10 @@ function getIt(){
 
 function frameIt(){
   $("img").on('load', function(){
-    $(this).append('<class="tasty"/>')
-    
+    $('img').addClass("tasty");
   })
 }
+
 
 function pressIt(){
   $("input").on("keydown", function(e){
