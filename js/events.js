@@ -15,6 +15,7 @@ $('img').on('load',function() {
 })
 }
 
+  
 function pressIt(key) {
   //binds an event that alerts the user when the G key was pressed down
   $('#typing').on('keydown', function(key) {
@@ -30,7 +31,3 @@ function submitIt() {
   alert("Your form is going to be submitted now.")
 })
 }
-
-$(document).ready(function(){
-  //call functions here
-})
