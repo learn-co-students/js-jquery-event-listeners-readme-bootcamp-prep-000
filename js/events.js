@@ -1,7 +1,38 @@
-//define functions here
 
-$(document).ready(function(){
+//define functions here....
+function getIt() {
+  $('p').on('click', function() {
+    alert('hey!')
+  })
+}
 
-// call functions here
+function frameIt() {
+  $('img').on('load', function() {
+    $('img').addClass('tasty')
+  })
+}
 
-});
+function pressIt() {
+  $('#typing').on('keydown', function(e) {
+    // 'g' corresponds to 71
+    if (e.which === 71) {
+      alert("You pressed 'g'!")
+    }
+  })
+}
+
+function submitIt() {
+  $('form').on('submit', function(e) {
+    alert('Your form is going to be submitted now.')
+  })
+}
+
+//call functions here...
+
+$(document).on('ready', function()
+{
+  getIt;
+  frameIt;
+  pressIt;
+  submitIt;
+})
