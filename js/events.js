@@ -1,46 +1,33 @@
-function getIt(){
-  $('p').on('click', function(){
-    alert("Hey!");
-  });
-
-
-
-  getIt();
-
-  frameIt();
-
-  pressIt();
-
-  submitIt();
-
-});
-
 function getIt() {
-  $('p').on('click', function() {
-    alert("Hey!");
-  });
+  $('p').on('click',function() {
+    alert ('Hey!')
+  })
 }
 
 function frameIt() {
-  $('body img').on('load', function() {
-    $("body img").addClass("tasty");
-    console.log('Trying to add the class tasty');
-  });
+ $('img').on('load', function (){
+   $(this).addClass('tasty')
+ })
 }
 
 function pressIt() {
-  $('#typing').on('keydown', function(key) {
-    console.log(`Key pressed = ${key.which}`)
-    if(key.which == 71) {
-      alert('You have pressed the G key!!');
+  $(document).on ('keydown', function(key){
+    if(key.which==71) {
+      alert('The G key has been pressed')
     }
-  });
+  })
 }
 
 function submitIt() {
-  $('form').on('submit', function () {
-    alert('Your form is going to be submitted now.');
-    console.log('Submitting form');
-    return;
+  $('form').on('submit', function() {
+    alert('Your form is going to be submitted now.')
+    return
   })
 }
+$(document).ready(function(){
+
+// call functions here
+getIt()
+frameIt()
+submitIt()
+});
