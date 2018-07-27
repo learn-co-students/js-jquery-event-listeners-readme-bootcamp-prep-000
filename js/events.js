@@ -17,7 +17,7 @@ function submitIt(){
 }
 
 function pressIt(){
-  $('#typing').on("keypress", function(event) {
+  $('#typing').on("keydown", function(event) {
   if (event.which == 71) {
   alert("G!");
     }
