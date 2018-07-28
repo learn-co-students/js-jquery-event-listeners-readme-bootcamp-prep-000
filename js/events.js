@@ -1,4 +1,35 @@
-//define functions here
+function getIt(){
+  $('p').on("click", function()
+  {
+    alert("Hey!");
+  })
+}
+
+function frameIt(){
+  $('img').on("load",  function()
+  {
+    $('img').addClass("tasty");
+    // document.addClass("tasty");
+    // var image = document.getElementById("img");
+    // image.classList.add("tasty");
+  })
+}
+
+function pressIt(){
+  $(document).on('keydown',
+  function(key){
+    if(key.which == 71){
+      alert();
+    }
+  })
+}
+
+function submitIt(){
+  $('form').on("submit", function()
+  {
+    alert("Your form is going to be submitted now.");
+  })
+}
 
 $(document).ready(function(){
 
