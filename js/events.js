@@ -19,8 +19,8 @@ function frameIt(){
   })
 }
 function pressIt(){
-  $('input').on("keydown",function(e){
-    if (e.key.toLoweCase() === 'g'){
+  $('#typing').on("keydown",function(e){
+    if (e.key === 'G'){
       alert("blah blah bal")
     }
   })
