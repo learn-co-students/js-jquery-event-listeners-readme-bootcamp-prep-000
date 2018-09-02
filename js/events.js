@@ -20,7 +20,7 @@ function frameIt(){
 }
 function pressIt(){
   $('input').on("keydown",function(e){
-    if (e.key === 'G'){
+    if (e.key.toLoweCase() === 'g'){
       alert("blah blah bal")
     }
   })
