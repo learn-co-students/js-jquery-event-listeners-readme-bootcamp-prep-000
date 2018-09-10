@@ -12,8 +12,8 @@ function getIt() {
 
 function frameIt() {
   $('img').on('load', function() {
-    $('img').attr('<img src="img" class="tasty" border-color="red" />')
-  })
+   
+   $('img').append()  
+})
 }
-
 
