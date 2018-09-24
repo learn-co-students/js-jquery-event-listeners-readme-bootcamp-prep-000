@@ -17,7 +17,7 @@ virtualConsole.on("log", function (message) {
 before(function(done) {
   global.window = jsdom.jsdom(html, { scripts, virtualConsole }).defaultView
 
-  jsdom.jQueryify(window, "http://code.jquery.com/jquery-2.1.1.js", () => {
+  jsdom.jQueryify(window, "http://code.jquery.com/jquery-3.3.1.js", () => {
     done()
   })
 })
