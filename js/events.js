@@ -8,7 +8,8 @@ function getIt() {
 
 function frameIt() {
   return $('img').on('load', function () {
-    //something goes here.
+    $('img').addClass('tasty')
+    //addClass isn't mentioned anywhere in this lesson, unless im totally missing something. i assume that's an oversight?
   })
 }
 
