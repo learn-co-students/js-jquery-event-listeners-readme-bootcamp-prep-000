@@ -8,7 +8,7 @@ function getIt() {
 
 function frameIt() {
   return $('img').on('load', function () {
-    //nothing regarding red frames, the class 'tasty' or anything involved with what comes in this function is anywhere in this lesson. 
+    //something goes here.
   })
 }
 
