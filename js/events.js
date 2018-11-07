@@ -1,22 +1,30 @@
 
 function getIt() {
-  const para = document.querySelector('p');
-  para.addEventListener('click', function(eventname) {
-  alert("Hey!");
-})}
+  $(document).on('click', function(eventname) {
+    alert("Hey!");
+  });
+}
 
 
-$(document).ready(function getIt() {
-});
+getIt();
 
 
 function frameIt() {
   const tasty = document.querySelector('img');
   tasty.classList.add("tasty");
-  tasty.addEventListener('load', function(eventname) {
+  tasty.addEventListener('load', function(eventname){
+  });
+}
+
+
+frameIt();
+
+
+function pressIt() {
+  $(document).on('keydown',function(key) {
+    if(key.which == 71) {
+    alert('G was pressed' );
   }
-  )}
+})}
 
-
-$(document).ready(function frameIt() {
-});
+pressIt();
