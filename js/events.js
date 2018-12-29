@@ -27,7 +27,7 @@ function submitIt() {
   });
 }
 
-$(document).ready(function() {
+$(document).ready(ready => {
 getIt();
 frameIt();
 pressIt();
