@@ -14,7 +14,7 @@ function frameIt() {
 
 function pressIt() {
   $('body form').on('keydown', event => {
-    if (event.key === 'G') {
+    if (event.which === 71) {
       alert('You have pressed the G key')
     };
   });
