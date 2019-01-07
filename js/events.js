@@ -4,8 +4,8 @@ function getIt () {
 }
 
 function frameIt () {
-  document.images[0].style.border = 'red';
-  document.images[0].className = 'tasty';
+  $('img').on('load', function(){$('img').css('border', "solid 2px red");});
+  $('img').on('load', function(){$('img').addClass('tasty')});
 }
 
 function pressIt () {
