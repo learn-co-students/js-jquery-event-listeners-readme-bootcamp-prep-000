@@ -19,7 +19,7 @@ function frameIt () {
     $('img').css('border', "solid 2px black")
   }
 
- $('#typing').on('keydown', pressIt)
+
  
 function pressIt() {    
         $('#typing').on('keydown', function(key) {
