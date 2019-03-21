@@ -8,9 +8,7 @@ var getIt = () => $('p').on('click', () => alert('Hey!') );
 should bind the `load` event that adds the class `tasty` to the image to add a
 red frame to the image. */
 
-var frameIt = () => $('img').load( () => {
-  $('img').addClass('tasty');
-});
+var frameIt = () => $('img').load( () => $('img').addClass('tasty') );
 
 /* Define a function `pressIt` that does not accept a parameter. The function
 should bind a `keydown` event to the input field of the form that alerts a user
