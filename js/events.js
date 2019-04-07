@@ -26,8 +26,6 @@ function frameIt() {
   })
 }
 
-
-
 //selects document and checks the state of readiness to be run because the code within this function will only run if the DOM is ready for the javascript code to run
 $(document).ready(function(){
 
