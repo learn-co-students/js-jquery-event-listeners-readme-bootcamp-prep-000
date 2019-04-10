@@ -12,7 +12,7 @@ function frameIt() {
 }
 
 function pressIt() {
-  return $('input').on('keydown', function(e) {
+  return $('#typing').on('keydown', function(e) {
     if(e.which === 71) {
     alert('G Was Pressed');
    }
