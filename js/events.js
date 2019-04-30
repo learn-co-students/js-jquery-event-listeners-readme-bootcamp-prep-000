@@ -27,12 +27,4 @@ function submitIt() {
 
 $(document).ready(function(){
 
-// call functions here
-
-});
-
-$(document).ready(function(){
-
-
-
 });
