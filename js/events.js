@@ -30,4 +30,5 @@ $(document).ready(function(){
   getIt();
   frameIt();
   submitIt();
+  pressIt();
 });
