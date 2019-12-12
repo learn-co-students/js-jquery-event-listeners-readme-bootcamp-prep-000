@@ -2,6 +2,6 @@
 
 $(document).ready(function(){
 
-// call functions here
+ console.log("testing")
 
 });
