@@ -9,29 +9,32 @@ function getIt()
 function frameIt()
 {
     $("img").addClass('tasty').on("load", function(){
-   
-   });
+                                                      });
 }
+
 function pressIt()
 {
-  $("form").on("keydown", function() {
-    if ($( "input:first" ).val() === "G") {
-    alert('G is pressed');
-    return;
-  }
-})
+  $("#typing").on('keydown', function(key) {
+    
+     if ( key.which === 71) 
+     {
+       return alert(' G was pressed');
+     }
+  
+});
 }
 function submitIt()
 {
-  $("form").on("keydown", function() {
-    
-    alert("Your form is going to be submitted now.");
+  $("form").on("submit", function() 
+  {
+    return alert("Your form is going to be submitted now.");
   })
 }
 
 $(document).ready(function(){
 
 // call functions here
+
 getIt()
 frameIt()
 pressIt()
