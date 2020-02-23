@@ -2,7 +2,7 @@
 
 function getIt()
 {
-  $('p').on("click", function() {alert("Hey")});
+  $('p').on("click", function() {alert("Hey!")});
 }
 
 function frameIt()
@@ -21,12 +21,13 @@ function frameIt()
 
 function pressIt()
 {
-  $('form #typing').on('keydown',
+
+  $('#typing').on('keydown',
   function(e)
     {
-      if(e.key === 'G')
+      if(e.which === 71)
       {
-        alert('You have pressed the "G" key');
+        return alert('You have pressed the "G" key');
       }
     }
   );
@@ -34,9 +35,19 @@ function pressIt()
 
 function submitIt()
 {
-  var test = $(':submit');
-  console.log(test);
-  console.log("hello");
+  $('form').on('submit',
+    function()
+    {
+      return alert('Your form is going to be submitted now.');
+    }
+  );
+  
+  
+  /*
+  const sub = window.$(':submit');
+  console.log(sub[0]);
+  sub[0].addEventListener('click', function () {alert("Your form is going to be submitted now.")});
+  */
 }
 
 
