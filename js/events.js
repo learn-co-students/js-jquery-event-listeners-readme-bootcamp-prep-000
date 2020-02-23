@@ -41,13 +41,6 @@ function submitIt()
       return alert('Your form is going to be submitted now.');
     }
   );
-  
-  
-  /*
-  const sub = window.$(':submit');
-  console.log(sub[0]);
-  sub[0].addEventListener('click', function () {alert("Your form is going to be submitted now.")});
-  */
 }
 
 
