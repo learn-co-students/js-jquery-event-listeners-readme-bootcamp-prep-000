@@ -1,26 +1,37 @@
 function getIt() {
-  alert("Hey!")
+
+  $('p').on('click', function(){
+      //console.log(e)
+      alert("Hey!")
+  })
+
+
 }
 
 function frameIt() {
- $("img").addClass("tasty");
-  'img'.class ='tasty'
+  $('img').on('load', function() {
+    $("img").addClass("tasty");
+     //'img'.class ='tasty'
+  })
+
 }
 
 function pressIt() {
-   if ($('input') == 'G') {
+//'#typing'
+    $(document).on('keydown', function(e) {
+      //console.log(e);
+  if (e.which == '71') {
     alert('You pressed a G key')
-    return
-  }
-  else {
-    return
+
   }
 
-
+})
 }
 function submitIt() {
-  alert("Your form is going to be submitted now.")
-  return
+  $("form").on("submit", function() {
+    alert("Your form is going to be submitted now.")
+    return
+  })
 }
 
 $(document).ready(function(){
