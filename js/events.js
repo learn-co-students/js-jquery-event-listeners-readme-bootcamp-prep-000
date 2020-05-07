@@ -1,6 +1,8 @@
 //define functions here
 
-var testArr = [2401, 2402]
+(function() {
+  var testArr = [2401, 2402]
+}).call(this)
 
 // $(document).ready(function() {
 
