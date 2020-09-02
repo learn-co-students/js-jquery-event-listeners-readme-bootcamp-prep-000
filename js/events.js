@@ -22,8 +22,8 @@ function pressIt(){
     if(e.which == 71){
       alert('g was pressed');
     }
-    }
   })
+  }
 
 $(document).ready(function(){
 // call functions here
