@@ -7,7 +7,7 @@ $(document).ready(function(){
   
   $('img').on('load', frameIt);
   
-  $('input').on('keydown', pressIt);
+  $('#typing').on('keydown', pressIt);
   
   $('form').on('submit', submitIt);
 });
@@ -22,10 +22,16 @@ function frameIt() {
   $('img').addClass('tasty');
 }
 
-function pressIt() {
-  
-}
 
 function submitIt() {
   alert('Your form is going to be submitted now.');
 }
+
+function pressIt() {
+  $("#typing").on('keydown', function(key) {
+    if (key.which === 71) {
+      alert('G was pressed');
+    }
+  });
+  
+  }
