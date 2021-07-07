@@ -1,7 +1,42 @@
-//define functions here
+function getIt() {
+  
+  $('p').on("click", function(){
+  
+    alert("Hey!");
+  });
+}
 
-$(document).ready(function(){
+function frameIt() {
+  
+  $('img').on('load', function() {
 
-// call functions here
+    $("img").addClass("tasty");
+  });
+}
 
+function pressIt() {
+  $('input').on("keydown", function(key){
+    if (key.which === 71) {
+      
+      alert("You have pressed the Spot on the keyboard known as G...The G spot!");
+    }
+  });
+}
+
+function submitIt(){
+ $('form').on("submit", function(){
+   
+   alert("Your form is going to be submitted now.")
+ }) 
+}
+
+$(document).ready(function() {
+
+frameIt();
+
+getIt();
+
+pressIt();
+
+submitIt();
 });
