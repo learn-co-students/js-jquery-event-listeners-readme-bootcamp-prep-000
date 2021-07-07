@@ -1,7 +1,33 @@
-//define functions here
+function getIt() {
+  $('p').on('click', function() {
+    alert('Hey!')
+  })
+}
+ 	 
+function frameIt () {
+  $('img').on('load', function () {
+    $('img').addClass('tasty');
+  })
 
-$(document).ready(function(){
+ 	 
+}
+function pressIt() {
+  $('form').on('keydown', function(event) {
+    if (event.which == 71) {
+      alert('g was pressed')
+    }
+  })
+}
+function submitIt() {
+  $('form').on('submit', function() {
+    alert('Your form is going to be submitted now.')
+  })
+}
 
-// call functions here
+$(document).ready(function() {
 
-});
+getIt() 
+frameIt()
+pressit()
+submitIt()
+})
