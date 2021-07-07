@@ -1,7 +1,7 @@
-//define functions here
-
 $(document).ready(function(){
-
-// call functions here
-
+   $("p").click(function getIt(){
+      alert ('Hey!');
+    });
 });
+
+$('img').addClass("tasty");
